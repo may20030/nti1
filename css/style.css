@@ -1,0 +1,253 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+a{
+    text-decoration:none;
+}
+.nav-link{
+    color:#457B9D !important;
+}
+
+
+.card {
+    border: 1px solid #A8DADC;
+    border-radius: 15px;
+    padding: 15px;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* .card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+
+.price {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.heart-btn {
+    background: #ff5a5a;
+    color: white;
+    font-size: 25px;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.product-wrapper {
+    max-width: 1000px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+}
+
+.main-image {
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-image .badge-new,.mycard .badge-new{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #FF5A5A;
+    color: white;
+    font-size: 0.75rem;
+    padding: 2px 15px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.thumbs img {
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.thumbs img.active {
+    border-color: #0d6efd;
+}
+
+.color-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.price {
+    font-size: 2rem;
+    color: #000;
+    font-weight: bold;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 1rem;
+}
+
+.carousel-indicators {
+    position: relative;
+    margin-top: 10px;
+}
+
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+/* ================================================================================= */
+.header-of-cart {
+    background-color: #F3F3F3;
+    padding: 20px;
+}
+
+.header-of-cart span:nth-child(1) {
+    margin-left: 33%;
+}
+
+.header-of-cart span {
+    margin-right: 130px;
+    color: #559DC4;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px 30px;
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    margin-left: 50px;
+}
+
+.cart-item h4 {
+    margin-left: 75px;
+    color: #559DC4;
+}
+
+.quantity {
+    display: flex;
+    border: 2px solid;
+    align-items: center;
+    margin-left: 100px;
+    border: #559DC4 1px solid;
+
+}
+
+.quantity button {
+    padding: 10px;
+    background: transparent;
+    border: transparent;
+    color: #559DC4;
+    font-size: 16px;
+    font-weight: 500px;
+}
+
+.quantity p {
+    padding: 5px 10px;
+    margin-bottom: 0px;
+    color: #559DC4;
+    font-size: 16px;
+    font-weight: 500px;
+}
+
+.main-cart1 {
+    margin-bottom: 100px;
+}
+
+#check-out {
+    margin-top: 100px;
+    padding: 20px 30px;
+    border: 1px solid #559DC4;
+    display: inline-block;
+    width: 250px;
+    text-align: center;
+    color: #559DC4;
+}
+
+.leftAndRightDiv {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+
+}
+
+.leftAndRightDiv p:last-child {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.clear-cart-btn {
+    color: #559DC4;
+    background-color: transparent;
+    padding: 6px 16px;
+    border: #559DC4 1px solid;
+    font-weight: 600;
+    width: 100%;
+}
+.out-lig{
+    border: #559DC4 1px solid;   
+}
+.remove-item {
+    color: #559DC4;
+    background-color: transparent;
+    padding: 6px 16px;
+    border: #559DC4 1px solid;
+    font-weight: 600;
+}
+/* =============================================================================================================== */
+
+#pro-img-scail {
+    transition: transform 0.4s ease;
+  }
+  
+  .mycard:hover #pro-img-scail  {
+    transform: scale(1.1);
+  }
+  
+  .add-to-cart {
+    position: absolute;
+    bottom: 100px; 
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 0.4s ease;
+    background-color: #FF5A5A;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    z-index: 2;
+  }
+  
+  .mycard:hover .add-to-cart {
+    bottom: 150px; 
+    opacity: 1;
+  }
+  

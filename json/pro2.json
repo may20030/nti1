@@ -1,0 +1,35 @@
+[
+    {
+        "id": 7,
+        "title": "Literature Classical",
+        "price": 650,
+        "oldPrice": 750,
+        "image": "https://htmldemo.net/merier/merier/assets/images/shop/7.png",
+        "cov1": "https://htmldemo.net/merier/merier/assets/images/shop/2.png",
+        "cov2": "https://htmldemo.net/merier/merier/assets/images/shop/3.png",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, repellendus. Nam voluptate illo ut quia non sapiente provident alias quos laborum incidunt, earum accusamus, natus. Vero pariatur ut veniam sequi amet conse",
+        "isNew": true
+    },
+    {
+        "id": 8,
+        "title": "Randomised Dress",
+        "price": 650,
+        "oldPrice": 750,
+        "image": "https://htmldemo.net/merier/merier/assets/images/shop/8.png",
+        "cov1": "https://htmldemo.net/merier/merier/assets/images/shop/1.png",
+        "cov2": "https://htmldemo.net/merier/merier/assets/images/shop/3.png",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, repellendus. Nam voluptate illo ut quia non sapiente provident alias quos laborum incidunt, earum accusamus, natus. Vero pariatur ut veniam sequi amet conse",
+        "isNew": true
+    },
+    {
+        "id": 9,
+        "title": "Fit Wool Suit",
+        "price": 650,
+        "oldPrice": 750,
+        "image": "https://htmldemo.net/merier/merier/assets/images/shop/9.png",
+        "cov1": "https://htmldemo.net/merier/merier/assets/images/shop/2.png",
+        "cov2": "https://htmldemo.net/merier/merier/assets/images/shop/1.png",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, repellendus. Nam voluptate illo ut quia non sapiente provident alias quos laborum incidunt, earum accusamus, natus. Vero pariatur ut veniam sequi amet conse",
+        "isNew": true
+    }
+]

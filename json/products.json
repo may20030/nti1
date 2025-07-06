@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "title": "Literature Classical",
+        "price": 650.90,
+        "oldPrice": 750.11,
+        "image": "https://htmldemo.net/merier/merier/assets/images/shop/1.png",
+        "cov1": "https://htmldemo.net/merier/merier/assets/images/shop/2.png",
+        "cov2": "https://htmldemo.net/merier/merier/assets/images/shop/3.png",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, repellendus. Nam voluptate illo ut quia non sapiente provident alias quos laborum incidunt, earum accusamus, natus. Vero pariatur ut veniam sequi amet conse",
+        "isNew": true
+    },
+    {
+        "id": 2,
+        "title": "Style Modern Dress",
+        "price": 650.02,
+        "oldPrice": 750.52,
+        "image": "https://htmldemo.net/merier/merier/assets/images/shop/2.png",
+        "cov1": "https://htmldemo.net/merier/merier/assets/images/shop/1.png",
+        "cov2": "https://htmldemo.net/merier/merier/assets/images/shop/3.png",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, repellendus. Nam voluptate illo ut quia non sapiente provident alias quos laborum incidunt, earum accusamus, natus. Vero pariatur ut veniam sequi amet conse",
+        "isNew": true
+    },
+    {
+        "id": 3,
+        "title": "Randomised jackets",
+        "price": 650.62,
+        "oldPrice": 750.63,
+        "image": "https://htmldemo.net/merier/merier/assets/images/shop/3.png",
+        "cov1": "https://htmldemo.net/merier/merier/assets/images/shop/2.png",
+        "cov2": "https://htmldemo.net/merier/merier/assets/images/shop/1.png",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, repellendus. Nam voluptate illo ut quia non sapiente provident alias quos laborum incidunt, earum accusamus, natus. Vero pariatur ut veniam sequi amet conse",
+        "isNew": true
+    },
+    {
+        "id": 4,
+        "title": "Fit Wool Suit",
+        "price": 650.99,
+        "oldPrice": 750.02,
+        "image": "https://htmldemo.net/merier/merier/assets/images/shop/4.png",
+        "cov1": "https://htmldemo.net/merier/merier/assets/images/shop/2.png",
+        "cov2": "https://htmldemo.net/merier/merier/assets/images/shop/3.png",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, repellendus. Nam voluptate illo ut quia non sapiente provident alias quos laborum incidunt, earum accusamus, natus. Vero pariatur ut veniam sequi amet conse",
+        "isNew": true
+    },
+    {
+        "id": 5,
+        "title": "Star Women pants",
+        "price": 650.63,
+        "oldPrice": 750.45,
+        "image": "https://htmldemo.net/merier/merier/assets/images/shop/5.png",
+        "cov1": "https://htmldemo.net/merier/merier/assets/images/shop/2.png",
+        "cov2": "https://htmldemo.net/merier/merier/assets/images/shop/3.png",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, repellendus. Nam voluptate illo ut quia non sapiente provident alias quos laborum incidunt, earum accusamus, natus. Vero pariatur ut veniam sequi amet conse",
+        "isNew": true
+    },
+    {
+        "id": 6,
+        "title": "Slightly jackets",
+        "price": 650.62,
+        "oldPrice": 750.35,
+        "image": "https://htmldemo.net/merier/merier/assets/images/shop/6.png",
+        "cov1": "https://htmldemo.net/merier/merier/assets/images/shop/2.png",
+        "cov2": "https://htmldemo.net/merier/merier/assets/images/shop/3.png",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, repellendus. Nam voluptate illo ut quia non sapiente provident alias quos laborum incidunt, earum accusamus, natus. Vero pariatur ut veniam sequi amet conse",
+        "isNew": true
+    }
+]
