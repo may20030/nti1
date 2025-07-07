@@ -2,33 +2,36 @@
     {
         "id": 10,
         "title": "Literature Classical",
-        "price": 650,
-        "oldPrice": 750,
+        "price": 650.54,
+        "oldPrice": 750.78,
         "image": "https://htmldemo.net/merier/merier/assets/images/shop/23.jpg",
         "cov1": "https://htmldemo.net/merier/merier/assets/images/shop/2.png",
         "cov2": "https://htmldemo.net/merier/merier/assets/images/shop/3.png",
+        "category": "Shirts",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, repellendus. Nam voluptate illo ut quia non sapiente provident alias quos laborum incidunt, earum accusamus, natus. Vero pariatur ut veniam sequi amet conse",
         "isNew": true
     },
     {
         "id": 11,
         "title": "Style Modern Dress",
-        "price": 650,
-        "oldPrice": 750,
+        "price": 650.96,
+        "oldPrice": 750.74,
         "image": "https://htmldemo.net/merier/merier/assets/images/shop/17.jpg",
         "cov1": "https://htmldemo.net/merier/merier/assets/images/shop/1.png",
         "cov2": "https://htmldemo.net/merier/merier/assets/images/shop/3.png",
+        "category": "Shoes",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, repellendus. Nam voluptate illo ut quia non sapiente provident alias quos laborum incidunt, earum accusamus, natus. Vero pariatur ut veniam sequi amet conse",
         "isNew": true
     },
     {
         "id": 12,
         "title": "Randomised jackets",
-        "price": 650,
-        "oldPrice": 750,
+        "price": 650.74,
+        "oldPrice": 750.99,
         "image": "https://htmldemo.net/merier/merier/assets/images/shop/24.jpg",
         "cov1": "https://htmldemo.net/merier/merier/assets/images/shop/2.png",
         "cov2": "https://htmldemo.net/merier/merier/assets/images/shop/1.png",
+        "category": "Shirts",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, repellendus. Nam voluptate illo ut quia non sapiente provident alias quos laborum incidunt, earum accusamus, natus. Vero pariatur ut veniam sequi amet conse",
         "isNew": true
     }

@@ -202,3 +202,61 @@ fetch('../json/pro3.json')
     }
     
 //===================================================================================
+let allProducts = [];
+
+function loadShopProducts() {
+    fetch('../json/all.json')
+        .then(res => res.json())
+        .then(data => {
+            allProducts = data;
+            displayShopProducts(allProducts); 
+        });
+}
+
+function displayShopProducts(products) {
+    const container = document.getElementById("productsContainer");
+    container.innerHTML = "";
+    products.forEach(product => {
+        const col = document.createElement("div");
+        col.className = "col-md-4 mb-4";
+
+        col.innerHTML = `
+            <div class="card mycard text-center position-relative overflow-hidden">
+                ${product.isNew ? '<div class="badge-new">New</div>' : ''}
+                <a href="../mayar/product.html?id=${product.id}">
+                    <img src="${product.image}" class="img-fluid mb-3" style="height:250px;object-fit:contain;" alt="">
+                </a>
+                <h5 style="color:#1D3557; font-family: 'Playfair Display'; font-weight:700;">${product.title}</h5>
+                <div class="mb-2">
+                    <span class="price" style="font-family: 'Playfair Display';color:#1D3557;">$${product.price}</span>
+                    <span class="old-price ms-2" style="color:#457B9D;">$${product.oldPrice}</span>
+                </div>
+            </div>
+        `;
+        container.appendChild(col);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    loadShopProducts();
+
+    const categoryDivs = document.querySelectorAll(".category");
+    categoryDivs.forEach(cat => {
+        cat.addEventListener("click", () => {
+            const catType = cat.dataset.category;
+            if (catType === "all") {
+                displayShopProducts(allProducts);
+            } else {
+                const filtered = allProducts.filter(p => p.category === catType);
+                displayShopProducts(filtered);
+            }
+        });
+    });
+
+    document.querySelector('input[type="search"]').addEventListener("input", function () {
+        const keyword = this.value.toLowerCase();
+        const filtered = allProducts.filter(p => p.title.toLowerCase().includes(keyword));
+        displayShopProducts(filtered);
+    });
+});
+

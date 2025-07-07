@@ -250,4 +250,14 @@ a{
     bottom: 150px; 
     opacity: 1;
   }
-  
+  /* ======================================================================================= */
+  .my-bg-blue{
+    background-color: #A8DADC;
+    color: #1D3557;
+    border-radius: 6%;
+    padding-block: 20px;
+  }
+  .my-bg-blue:hover{
+    background-color: #1D3557;
+    color: #fff;
+  }
