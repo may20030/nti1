@@ -1,79 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Checkout Page</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>my account</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  
-  <div class="navbar">
-    <div class="title">
-  <span class="home-text">Home</span> / Checkout
+<div class="header">
+<div class="left-header">
+    <p class="navtitle"><span>Home</span> / Account</p>
+    <h1 class="page-title">My Account</h1>
+</div>
+<div class="right-header">
+    <p class="nav-link">Account</p>
+</div>
 </div>
 
-    <h2>All Trending Products</h2>
-    <div class="title-link">Checkout Page</div>
-  </div>
-
-  
-  <div class="checkout-container">
-    <h1>Billing Details</h1>
-    
-    <div class="billing-details">
-      <input type="text" id="first_name" placeholder="First Name" />
-  <input type="text" id="last_name" placeholder="Last Name" />
-  <input type="text" id="phone" placeholder="Phone" />
-  <input type="text" id="email" placeholder="Email" />
-  <input type="text" id="country" placeholder="Country" />
-  <input type="text" id="city" placeholder="City" />
-  <input type="text" id="street" placeholder="Street" />
-  <input type="text" id="district" placeholder="District" />
-  <input type="text" id="apartment" placeholder="Apartment" />
-  <input type="text" id="zip_code" placeholder="ZIP Code" />
-  <input type="text" id="company_name" placeholder="Company" />
-  <textarea id="order_notes" placeholder="Order notes (optional)"></textarea>
-      <select id="country">
-        <option value="">Select Country</option>
-        <option value="Egypt">Egypt</option>
-        <option value="USA">USA</option>
-      </select>
-    </div>
-
-    
-    <div class="order-summary">
-      <h4>Your Order</h4>
-      <div class="product1"><strong>Brother Hoodie x 4</strong><span>$140.00</span></div>
-      <div class="product1"><strong>Enjoy the Treat x 1</strong><span>$59.99</span></div>
-      <hr/>
-      <div class="product2"><strong>Subtotal</strong><span>$199.99</span></div>
-      <hr/>
-      <div class="product3"><strong>Shipping</strong></div>
-<div class="shipping-options">
-  <label><input type="radio" name="shipping" value="free" /> Free shipping</label>
-  <label><input type="radio" name="shipping" value="flat" /> Flat rate: $100.00</label>
-  <label><input type="radio" name="shipping" value="pickup" /> Local pickup: $120.00</label>
+<div class="user">
+<div class="inputs">
+    <input type="text" placeholder="Your Name" class="user-input" />
+    <input type="email" placeholder="Email Address" class="user-input" />
+</div>
+<div class="buttons">
+    <button class="btn logout">Log Out</button>
+    <button class="btn details">Account Details</button>
+</div>
 </div>
 
-      <hr/>
-        <div class="total"><strong>Total:</strong><span>$199.99</span></div>
-
-      <div class="payment">
-        <label><input type="radio" name="payment" value="bank_transfer" /> Direct Bank Transfer
-        <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.</p>
-        </label>
-        <label><input type="radio" name="payment" value="cash_on_delivery" /> Cash on Delivery</label>
-        <label><input type="radio" name="payment" value="paypal" /> paypal</label>
-        <hr/>
-        <div class="pra">
-        <p>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our <span>privacy policy.</span></p>
-      </div>
-</div>
-      <button type="button" class="place-order">PLACE ORDER</button>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
