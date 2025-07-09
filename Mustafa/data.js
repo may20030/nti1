@@ -2,11 +2,7 @@
 // Name Regex
 const name_regex = /^[a-zA-Z]+(?: [a-zA-Z]+)*$/;
 // Email Regex
-const email_regex =  /^[a-zA-Z]{4,15}[0-9]{0,3}[-._]{0,1}[a-zA-Z]{0,15}(@)(gmail|yahoo|oulook|hotmail)(.com)/;
-
-// Password Regex 
-const password_regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@#$%^&+=!]).{8,}$/;
-
+const email_regex =   /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 // Validate Name
 function validateName(name) {
     return name_regex.test(name);
@@ -15,48 +11,14 @@ function validateName(name) {
 // Validate Email
 function validateEmail(email) {
     return email_regex.test(email);
+
 }
-
-// Validate Password
-function validatePassword(password) {
-    return password_regex.test(password);
-}
-
-// Validate Login Form
-function validateForm(event) {
-    const email = document.getElementById("email-login").value;
-    const password = document.getElementById("password-login").value;
-
-    if (!validateEmail(email)) {
-        swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Invalid email',
-            confirmButtonText: 'Try again',
-    });
-        event.preventDefault();
-        return false;
-    }
-
-    if (!validatePassword(password)) {
-        swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Invalid password',
-            confirmButtonText: 'Try again',
-    });
-        event.preventDefault();
-        return false;
-    }
-
-    return true;
-}
-
 // Validate Register Form
 function validateFormRegister(event) {
     const email = document.getElementById("email-register").value;
     const password = document.getElementById("password-register").value;
     const name = document.getElementById("username-register").value;
+    const password_check = document.getElementById("password-register-check").value;
 
     if (!validateName(name)) {
         swal.fire({
@@ -79,18 +41,16 @@ function validateFormRegister(event) {
         event.preventDefault();
         return false;
     }
-
-    if (!validatePassword(password)) {
+    if (password !== password_check) {
         swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Invalid password',
+            text: 'Passwords do not match',
             confirmButtonText: 'Try again',
     });
         event.preventDefault();
         return false;
     }
-
     return true;
 }
 // jsonbin data-base
@@ -246,7 +206,7 @@ function registeruser(){
                     icon: 'error',
                     title: 'Oops...',
                     text: 'User already exists',
-                    confirmButtonText: 'Try again',
+                    confirmButtonText: 'Move to login',
                     willClose: () => {
                         window.location.href = "login-register.html";
                     }
@@ -264,15 +224,18 @@ function registeruser(){
             password: password
         };
 
-        // save user data
-        saveUser({user:user}).then(function(){
-            swal.fire({
+        saveUser({ user: user }).then(function () {
+            Swal.fire({
                 icon: 'success',
                 title: 'Success...',
                 text: 'User registered successfully',
                 confirmButtonText: 'OK',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // بعد ما يضغط OK
+                    window.location.href = "login-register.html";
+                }
             });
-            window.location.href = "login-register.html";
         });
     });
 }
@@ -320,3 +283,63 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// google login
+const GOOGLE_CLIENT_ID = "873052561390-ek8v4lbtch8otjhoqnrhn4tm9ev1koqi.apps.googleusercontent.com";
+
+window.onload = function () {
+google.accounts.id.initialize({
+    client_id: GOOGLE_CLIENT_ID,
+    callback: handleGoogleResponse,
+});
+// google login button
+google.accounts.id.renderButton(
+    document.getElementById("google-login"),
+    { theme: "filled_blue", size: "medium" ,
+    text: "signin_with", // "signup_with"
+    shape: "pill",     
+    width: 300
+    } // optional config
+);
+};
+
+// parse jwt token
+function parseJwt(token) {
+  const base64Url = token.split('.')[1];
+  const base64 = atob(base64Url.replace(/-/g, '+').replace(/_/g, '/'));
+  return JSON.parse(base64);
+}
+
+// handle google response
+function handleGoogleResponse(response) {
+  const userData = parseJwt(response.credential);
+  console.log("✅ User data:", userData);
+
+  // Send data to JSONBin
+  saveUser({ user: userData }).then(function () {
+    Swal.fire({
+      icon: 'success',
+      title: 'Success...',
+      text: 'User registered successfully via Google',
+      confirmButtonText: 'OK',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.href = "login-register.html";
+      }
+    });
+  });
+}
+
+// save user data in JSONBin
+async function saveUser({ user }) {
+  const response = await fetch('https://api.jsonbin.io/v3/b/6860ee398561e97a502df1e1', {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-Master-Key': '$2a$10$enKlcZOlWIILvpxs/Zg.Q.HUQ05zebl5/XoU2jVeWrmhDg3wx3Soq',
+    },
+    body: JSON.stringify(user),
+  });
+
+  if (!response.ok) throw new Error('Failed to save user');
+  return await response.json();
+}

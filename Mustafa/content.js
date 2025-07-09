@@ -46,10 +46,6 @@ form_box2.appendChild(i_2);
 const Forgot_Password = document.createElement('div');
 Forgot_Password.className = 'forgot-link';
 form.appendChild(Forgot_Password);
-const Forgot_Password_a = document.createElement('a');
-Forgot_Password_a.href = '#';
-Forgot_Password_a.textContent = 'Forgot Password?';
-Forgot_Password.appendChild(Forgot_Password_a);
 // create button login
 const btn = document.createElement('button');
 btn.type = "submit";
@@ -134,9 +130,11 @@ input_box2_email.appendChild(input2_email);
 const input_box2_email_i = document.createElement('i');
 input_box2_email_i.className = 'fa-solid fa-envelope';
 input_box2_email.appendChild(input_box2_email_i);
+// create wrapper for password field
 const form2_box2 = document.createElement('div');
-form2.appendChild(form2_box2);
 form2_box2.className = 'input-box';
+form2.appendChild(form2_box2);
+// create password input
 const input2_password = document.createElement('input');
 input2_password.type = 'password';
 input2_password.name = 'password';
@@ -144,12 +142,34 @@ input2_password.placeholder = 'Password';
 input2_password.id = 'password-register';
 input2_password.required = true;
 input2_password.autocomplete = 'new-password';
-pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@#$%^&+=!]).{8,}" 
-title="Password must be at least 8 characters, with uppercase, lowercase, number, and special character."
-form2_box2.appendChild(input2_password);
+
+// create icon
 const i2_2 = document.createElement('i');
 i2_2.className = 'fa-solid fa-lock';
+
+// append input and icon
+form2_box2.appendChild(input2_password);
 form2_box2.appendChild(i2_2);
+
+// same for confirm password
+const form2_box3 = document.createElement('div');
+form2_box3.className = 'input-box';
+form2.appendChild(form2_box3);
+const input2_password_check = document.createElement('input');
+input2_password_check.type = 'password';
+input2_password_check.name = 'password-check';
+input2_password_check.placeholder = 'Confirm Password';
+input2_password_check.id = 'password-register-check';
+input2_password_check.required = true;
+input2_password_check.autocomplete = 'new-password';
+
+const input2_password_check_i = document.createElement('i');
+input2_password_check_i.className = 'fa-solid fa-lock';
+
+// append confirm password input and icon
+form2_box3.appendChild(input2_password_check);
+form2_box3.appendChild(input2_password_check_i);
+
 // create forgot password
 const forgot_password = document.createElement('div');
 forgot_password.className = 'forgot-link';
@@ -172,34 +192,18 @@ const forgot_password_p_2 = document.createElement('p');
 forgot_password_p_2.textContent = 'Or register with social platforms';
 forgot_password.appendChild(forgot_password_p_2);
 
-// create social
+// create social 
 const social_form_2 = document.createElement('div');
 social_form_2.className = 'social-icons';
 forgot_password.appendChild(social_form_2);
-const social_form_2_a = document.createElement('a');
-social_form_2_a.href = '#';
-social_form_2.appendChild(social_form_2_a);
-const social_form_2_i = document.createElement('i');
-social_form_2_i.className = 'fa-brands fa-facebook';
-social_form_2_a.appendChild(social_form_2_i);
+// Google
 const social_form_2_a_2 = document.createElement('a');
 social_form_2_a_2.href = '#';
+social_form_2_a_2.id = 'google-login'; // ✅ add ID
 social_form_2.appendChild(social_form_2_a_2);
 const social_form_2_i_2 = document.createElement('i');
 social_form_2_i_2.className = 'fa-brands fa-google';
 social_form_2_a_2.appendChild(social_form_2_i_2);
-const social_form_2_a_3 = document.createElement('a');
-social_form_2_a_3.href = '#';
-social_form_2.appendChild(social_form_2_a_3);
-const social_form_2_i_3 = document.createElement('i');
-social_form_2_i_3.className = 'fa-brands fa-github';
-social_form_2_a_3.appendChild(social_form_2_i_3);
-const social_form_2_a_4 = document.createElement('a');
-social_form_2_a_4.href = '#';
-social_form_2.appendChild(social_form_2_a_4);
-const social_form_2_i_4 = document.createElement('i');
-social_form_2_i_4.className = 'fa-brands fa-linkedin';
-social_form_2_a_4.appendChild(social_form_2_i_4);
 // creata toggle box
 const toggle_box = document.createElement('div');
 toggle_box.className = 'toggle-box';
