@@ -1,0 +1,194 @@
+
+.navbar {
+  background-color: #edeff1;
+  padding: 40px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .title,
+.navbar .title-link {
+  color: #457B9D;
+  font-size: 29px;
+}
+.navbar .title{
+  position: relative;
+  bottom: 10px;
+  left: 90px;
+}
+.home-text {
+  cursor: pointer;
+  transition: color 0.3s, border-bottom 0.3s;
+  border-bottom: 2px solid transparent;
+}
+
+.home-text:hover {
+  color: #457B9D;
+  border-bottom: 2px solid #b9bdc2;
+}
+
+
+.navbar .title-link{
+  position: relative;
+  right:100px;
+}
+
+.navbar h2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #1D3557;
+  position: relative;
+  right: 440px;
+  top: 30px;
+}
+
+
+.checkout-container {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+.checkout-container h1{
+  position: relative;
+  color:#1D3557;
+  left: 100px;
+  font-size: 20px;
+  padding: 20px;
+  margin-top: 30px;
+  
+
+}
+
+.billing-details {
+  flex: 1;
+  position: relative;
+  top: 100px;
+  right: 100px;
+}
+
+.billing-details input,
+.billing-details select,
+.billing-details textarea {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 25px;
+  border: 1px solid #ccc;
+  border-radius: 9px;
+  font-size: 14px;
+}
+
+.order-summary {
+  flex: 1;
+  background: #f9f9f9;
+  padding: 0px;
+  border: 1px  #ddd;
+  border-radius: 40px;
+  position: relative;
+  top: 90px;
+  
+}
+
+.order-summary h4 {
+  margin-bottom: 15px;
+  position: relative;
+  bottom: 80px;
+  text-align: center;
+  color: #1D3557;
+  font-size: 20px;
+}
+
+.order-summary .product1 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 20px;
+  font-size: 20px;
+  color: #1D3557;
+}
+.order-summary .product1 span{
+  color: red;
+}
+.order-summary .product2{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 20px;
+  font-size: 20px;
+  color: #1D3557;
+}
+.order-summary .product2 span{
+  color: red;
+}
+
+.order-summary .product3{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 20px;
+  font-size: 20px;
+  color: #1D3557;
+}
+
+.order-summary .shipping-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  color:rgb(102, 102, 102);;
+}
+.order-summary .total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  color:#1D3557;
+  font-size: 28px;
+  margin-bottom: 10px;
+  padding: 30px;
+}
+.order-summary .total span{
+  color: red;
+}
+
+
+
+.payment label {
+  display: block;
+  margin-top: 30px;
+  font-size: 18px;
+  position: relative;
+  left: 10px;
+  color: #1D3557;
+}
+.payment label p{
+  padding-left: 10px;
+  color: #457B9D;
+}
+.payment .pra p{
+  color: #1D3557;
+  text-align: center;
+  font-size: 19px;
+  font-family: Roboto, sans-serif, Arial, Helvetica, sans-serif;;
+}
+.payment .pra p span{
+  color: red;
+}
+
+.place-order {
+  background-color: #ff5e5e;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  position: relative;
+  top: 60px;
+}
+
+.place-order:hover {
+  background-color: #e84545;
+}
