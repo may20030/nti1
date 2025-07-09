@@ -1,104 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Delius&family=Edu+SA+Beginner:wght@400..700&family=Griffy&family=Meow+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+HU:wght@100..400&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>may</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout Page</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-    <header class="w-100">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg bg-transparent py-4 w-100">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#"><img
-                            src="https://htmldemo.net/merier/merier/assets/images/logo.png" alt=""></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-evenly" id="navbarSupportedContent">
-                        <ul class="navbar-nav w-50 justify-content-around mb-2 mb-lg-0 fw-bold">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="./mayar/shop.html">Shop</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Login</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">About</a>
-                            </li>
+  
+  <div class="navbar">
+    <div class="title">
+  <span class="home-text">Home</span> / Checkout
+</div>
 
-                        </ul>
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <a href="./mayar/cart.html" type="button" class="btn btn-outline-light  position-relative">
-                                <i class="fa-solid fa-basket-shopping" style="color: #457B9D;"></i>
-                                <span id="cart-count-span"
-                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                    0
-                                    <span class="visually-hidden">cart items</span>
-                                </span>
-                            </a>
-                        </form>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <h2>All Trending Products</h2>
+    <div class="title-link">Checkout Page</div>
+  </div>
 
-    <section class="container">
+  
+  <div class="checkout-container">
+    <h1>Billing Details</h1>
+    
+    <div class="billing-details">
+      <input type="text" id="first_name" placeholder="First Name" />
+  <input type="text" id="last_name" placeholder="Last Name" />
+  <input type="text" id="phone" placeholder="Phone" />
+  <input type="text" id="email" placeholder="Email" />
+  <input type="text" id="country" placeholder="Country" />
+  <input type="text" id="city" placeholder="City" />
+  <input type="text" id="street" placeholder="Street" />
+  <input type="text" id="district" placeholder="District" />
+  <input type="text" id="apartment" placeholder="Apartment" />
+  <input type="text" id="zip_code" placeholder="ZIP Code" />
+  <input type="text" id="company_name" placeholder="Company" />
+  <textarea id="order_notes" placeholder="Order notes (optional)"></textarea>
+      <select id="country">
+        <option value="">Select Country</option>
+        <option value="Egypt">Egypt</option>
+        <option value="USA">USA</option>
+      </select>
+    </div>
 
-        <div class="row py-5">
-            <div class="col text-center">
-                <h2 style="color:#1D3557;  font-family: 'Playfair Display', cursive; font-weight:700; font-size:45px;" >Best Products</h2>
-                <p style="color: #457BAA;font-weight:400; font-size:20px;">Lorem Ipsum is simply dummy text of the printing and <br> typesetting industry.
-                </p>
-            </div>
-        </div>
-        <div class="container py-5">
-            <div class="row" id="productsRow"></div>
-        </div>
-    </section>
-    <section class="container">
+    
+    <div class="order-summary">
+      <h4>Your Order</h4>
+      <div class="product1"><strong>Brother Hoodie x 4</strong><span>$140.00</span></div>
+      <div class="product1"><strong>Enjoy the Treat x 1</strong><span>$59.99</span></div>
+      <hr/>
+      <div class="product2"><strong>Subtotal</strong><span>$199.99</span></div>
+      <hr/>
+      <div class="product3"><strong>Shipping</strong></div>
+<div class="shipping-options">
+  <label><input type="radio" name="shipping" value="free" /> Free shipping</label>
+  <label><input type="radio" name="shipping" value="flat" /> Flat rate: $100.00</label>
+  <label><input type="radio" name="shipping" value="pickup" /> Local pickup: $120.00</label>
+</div>
 
-        <div class="row py-5">
-            <div class="col text-center">
-                <h2 style="color:#1D3557;  font-family: 'Playfair Display', cursive; font-weight:700; font-size:45px;">Tranding</h2>
-                <p style="color: #457BAA;font-weight:400; font-size:20px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                </p>
-            </div>
-        </div>
-        <div class="container py-5">
-            <div class="row" id="productsRow2"></div>
-        </div>
-    </section>
+      <hr/>
+        <div class="total"><strong>Total:</strong><span>$199.99</span></div>
 
+      <div class="payment">
+        <label><input type="radio" name="payment" value="bank_transfer" /> Direct Bank Transfer
+        <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.</p>
+        </label>
+        <label><input type="radio" name="payment" value="cash_on_delivery" /> Cash on Delivery</label>
+        <label><input type="radio" name="payment" value="paypal" /> paypal</label>
+        <hr/>
+        <div class="pra">
+        <p>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our <span>privacy policy.</span></p>
+      </div>
+</div>
+      <button type="button" class="place-order">PLACE ORDER</button>
+    </div>
+  </div>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-        crossorigin="anonymous"></script>
-    <script src="./js/main.js">
-
-    </script>
+  <script src="script.js"></script>
 </body>
-
 </html>
