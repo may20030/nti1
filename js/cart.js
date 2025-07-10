@@ -6,79 +6,79 @@ document.addEventListener("DOMContentLoaded", updateCartCountSpan);
 document.addEventListener("DOMContentLoaded", function () {
     let cartContainer = document.getElementById("product-in-cart");
 
-for (let key in localStorage) {
-    if (key.startsWith("product_")) {
-        let item = JSON.parse(localStorage.getItem(key));
+    for (let key in localStorage) {
+        if (key.startsWith("product_")) {
+            let item = JSON.parse(localStorage.getItem(key));
 
-        let div = document.createElement("div");
-        div.className = "cart-item";
+            let div = document.createElement("div");
+            div.className = "cart-item";
 
-        let img = document.createElement("img");
-        img.src = item.image;
-        img.className = "cart-img";
+            let img = document.createElement("img");
+            img.src = item.image;
+            img.className = "cart-img";
 
-        let title = document.createElement("h4");
-        title.innerText = item.title;
+            let title = document.createElement("h4");
+            title.innerText = item.title;
 
-        let price = document.createElement("h4");
-        price.innerText = item.price;
+            let price = document.createElement("h4");
+            price.innerText = item.price;
 
-        let quan = document.createElement("div");
-        quan.setAttribute("class", "quantity");
+            let quan = document.createElement("div");
+            quan.setAttribute("class", "quantity");
 
-        let increase = document.createElement("button");
-        let count = document.createElement("p");
-        count.innerText = "1";
-        let decrease = document.createElement("button");
-        decrease.innerText = "-";
-        increase.innerText = "+";
+            let increase = document.createElement("button");
+            let count = document.createElement("p");
+            count.innerText = "1";
+            let decrease = document.createElement("button");
+            decrease.innerText = "-";
+            increase.innerText = "+";
 
-        let numericPrice = item.price;
-        let total = document.createElement("h4");
-        total.innerText = "$" + numericPrice.toFixed(2);
+            let numericPrice = item.price;
+            let total = document.createElement("h4");
+            total.innerText = "$" + numericPrice.toFixed(2);
 
-        decrease.addEventListener("click", function () {
-            if (Number(count.innerText) > 1) {
-                count.innerText = Number(count.innerText) - 1;
-                total.innerText = "$" + (numericPrice * Number(count.innerText)).toFixed(2);
+            decrease.addEventListener("click", function () {
+                if (Number(count.innerText) > 1) {
+                    count.innerText = Number(count.innerText) - 1;
+                    total.innerText = "$" + (numericPrice * Number(count.innerText)).toFixed(2);
+                    updateSubtotal();
+                }
+            });
+
+            increase.addEventListener("click", function () {
+                if (Number(count.innerText) < 10) {
+                    count.innerText = Number(count.innerText) + 1;
+                    total.innerText = "$" + (numericPrice * Number(count.innerText)).toFixed(2);
+                    updateSubtotal();
+                }
+            });
+
+            quan.appendChild(decrease);
+            quan.appendChild(count);
+            quan.appendChild(increase);
+
+            let removeBtn = document.createElement("button");
+            removeBtn.classList.add("remove-item");
+            removeBtn.innerText = "Remove";
+            removeBtn.addEventListener("click", function () {
+                localStorage.removeItem(key);
+                div.remove();
                 updateSubtotal();
-            }
-        });
+                updateCartCountSpan();
+            });
 
-        increase.addEventListener("click", function () {
-            if (Number(count.innerText) < 10) {
-                count.innerText = Number(count.innerText) + 1;
-                total.innerText = "$" + (numericPrice * Number(count.innerText)).toFixed(2);
-                updateSubtotal();
-            }
-        });
+            div.appendChild(removeBtn);
+            div.appendChild(img);
+            div.appendChild(title);
+            div.appendChild(price);
+            div.appendChild(quan);
+            div.appendChild(total);
+            div.dataset.unitPrice = numericPrice;
+            div.dataset.quantityEl = count;
 
-        quan.appendChild(decrease);
-        quan.appendChild(count);
-        quan.appendChild(increase);
-
-        let removeBtn = document.createElement("button");
-        removeBtn.classList.add("remove-item");
-        removeBtn.innerText = "Remove";
-        removeBtn.addEventListener("click", function () {
-            localStorage.removeItem(key);
-            div.remove();
-            updateSubtotal();
-            updateCartCountSpan();
-        });
-
-        div.appendChild(removeBtn);
-        div.appendChild(img);
-        div.appendChild(title);
-        div.appendChild(price);
-        div.appendChild(quan);
-        div.appendChild(total);
-        div.dataset.unitPrice = numericPrice;
-        div.dataset.quantityEl = count;
-
-        cartContainer.appendChild(div);
+            cartContainer.appendChild(div);
+        }
     }
-}
 
 });
 
@@ -153,10 +153,11 @@ let clearBtnall = document.createElement("button");
 clearBtnall.innerText = "Proceed to Checkout";
 clearBtnall.className = "clear-cart-btn";
 clearBtnall.addEventListener("click", function () {
-    localStorage.clear();
-    cartContainer.innerHTML = "";
-    updateSubtotal();
-    updateCartCountSpan();
+    // localStorage.clear();
+    // cartContainer.innerHTML = "";
+    // updateSubtotal();
+    // updateCartCountSpan();
+    window.location.href = "../mohamed/index.html";
 });
 checkoutContainer.appendChild(clearBtnall);
 
