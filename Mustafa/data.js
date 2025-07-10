@@ -14,7 +14,6 @@ function validateEmail(email) {
 
 }
 // Validate Register Form
-//  Validate Register Form
 function validateFormRegister(event) {
     const email = document.getElementById("email-register").value.trim();
     const password = document.getElementById("password-register").value.trim();
