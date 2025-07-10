@@ -60,7 +60,9 @@ display: flex;
 gap: 20px;
 flex-wrap: wrap;
 }
-
+.inputs p{
+ display: block;   
+}
 .btn {
 padding: 12px 20px;
 font-size: 16px;

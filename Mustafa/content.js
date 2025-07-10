@@ -64,34 +64,6 @@ Forgot_Password.appendChild(Forgot_Password_a_2);
 const Forgot_Password_p_2 = document.createElement('p');
 Forgot_Password_p_2.textContent = 'Or login with social platforms';
 Forgot_Password.appendChild(Forgot_Password_p_2);
-// create social
-const social_form = document.createElement('div');
-social_form.className = 'social-icons';
-form.appendChild(social_form);
-const social_form_a = document.createElement('a');
-social_form_a.href = '#';
-social_form.appendChild(social_form_a);
-const social_form_i = document.createElement('i');
-social_form_i.className = 'fa-brands fa-facebook';
-social_form_a.appendChild(social_form_i);
-const social_form_a_2 = document.createElement('a');
-social_form_a_2.href = '#';
-social_form.appendChild(social_form_a_2);
-const social_form_i_2 = document.createElement('i');
-social_form_i_2.className = 'fa-brands fa-google';
-social_form_a_2.appendChild(social_form_i_2);
-const social_form_a_3 = document.createElement('a');
-social_form_a_3.href = '#';
-social_form.appendChild(social_form_a_3);
-const social_form_i_3 = document.createElement('i');
-social_form_i_3.className = 'fa-brands fa-github';
-social_form_a_3.appendChild(social_form_i_3);
-const social_form_a_4 = document.createElement('a');
-social_form_a_4.href = '#';
-social_form.appendChild(social_form_a_4);
-const social_form_i_4 = document.createElement('i');
-social_form_i_4.className = 'fa-brands fa-linkedin';
-social_form_a_4.appendChild(social_form_i_4);
 // create sign up form
 const containerForm = document.createElement('div');
 containerForm.className = 'form_box register';
@@ -199,7 +171,7 @@ forgot_password.appendChild(social_form_2);
 // Google
 const social_form_2_a_2 = document.createElement('a');
 social_form_2_a_2.href = '#';
-social_form_2_a_2.id = 'google-login'; // ✅ add ID
+social_form_2_a_2.id = 'google-login'; // add ID
 social_form_2.appendChild(social_form_2_a_2);
 const social_form_2_i_2 = document.createElement('i');
 social_form_2_i_2.className = 'fa-brands fa-google';
