@@ -14,7 +14,7 @@ function validateEmail(email) {
 
 }
 // Validate Register Form
-// ✅ Validate Register Form
+//  Validate Register Form
 function validateFormRegister(event) {
     const email = document.getElementById("email-register").value.trim();
     const password = document.getElementById("password-register").value.trim();
@@ -56,45 +56,6 @@ function validateFormRegister(event) {
 
     return true;
 }
-// function validateFormRegister(event) {
-//     const email = document.getElementById("email-register").value;
-//     const password = document.getElementById("password-register").value;
-//     const name = document.getElementById("username-register").value;
-//     const password_check = document.getElementById("password-register-check").value;
-
-//     if (!validateName(name)) {
-//         swal.fire({
-//             icon: 'error',
-//             title: 'Oops...',
-//             text: 'Invalid name',
-//             confirmButtonText: 'Try again',
-//     });
-//         event.preventDefault();
-//         return false;
-//     }
-
-//     if (!validateEmail(email)) {
-//         swal.fire({
-//             icon: 'error',
-//             title: 'Oops...',
-//             text: 'Invalid email',
-//             confirmButtonText: 'Try again',
-//     });
-//         event.preventDefault();
-//         return false;
-//     }
-//     if (password !== password_check) {
-//         swal.fire({
-//             icon: 'error',
-//             title: 'Oops...',
-//             text: 'Passwords do not match',
-//             confirmButtonText: 'Try again',
-//     });
-//         event.preventDefault();
-//         return false;
-//     }
-//     return true;
-// }
 // jsonbin data-base
 const id_bin = "6860ee398561e97a502df1e1";
 const api_key = "$2a$10$enKlcZOlWIILvpxs/Zg.Q.HUQ05zebl5/XoU2jVeWrmhDg3wx3Soq";
