@@ -85,7 +85,6 @@ function displayproducts(json, id) {
                       <span class="price" style="font-family: 'Playfair Display';color:#1D3557;">$${product.price}</span>
                       <span class="old-price ms-2" style="font-family: 'Playfair Display';color:#457B9D;">$${product.oldPrice}</span>
                     </div>
-                    <button class="heart-btn"><i class="bi bi-heart"></i>♥</button>
                   </div>
                 `;
 
@@ -128,7 +127,6 @@ fetch("../json/pro3.json")
               <span class="price" style="font-family: 'Playfair Display';color:#1D3557;">$${product.price}</span>
               <span class="old-price ms-2" style="font-family: 'Playfair Display';color:#457B9D;">$${product.oldPrice}</span>
             </div>
-            <button class="heart-btn"><i class="bi bi-heart"></i>♥</button>
           </div>
         `;
         row.appendChild(card);

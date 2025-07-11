@@ -5,14 +5,11 @@ document.addEventListener("DOMContentLoaded", updateCartCountSpan);
 
 document.addEventListener("DOMContentLoaded", function () {
     let cartContainer = document.getElementById("product-in-cart");
-
     for (let key in localStorage) {
         if (key.startsWith("product_")) {
             let item = JSON.parse(localStorage.getItem(key));
-
             let div = document.createElement("div");
             div.className = "cart-item";
-
             let img = document.createElement("img");
             img.src = item.image;
             img.className = "cart-img";

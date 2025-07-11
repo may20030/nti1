@@ -1,0 +1,108 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f3faef;
+    padding: 60px;
+    flex-wrap: wrap;
+    }
+    
+    .left-header .navtitle {
+    margin: 0;
+    color: #4a6c78;
+    font-size: 28px;
+    }
+    
+    .left-header .navtitle span {
+    cursor: pointer;
+    }
+    
+    .left-header .page-title {
+    margin: 5px 0 0;
+    font-size: 48px;
+    color: #1a2b3c;
+    font-weight: bold;
+    }
+    
+    .right-header .nav-link {
+    color: #4a6c78;
+    font-size: 34px;
+    
+    }
+    
+    
+    .user{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 60px;
+    background-color: #ffffff;
+    gap: 20px;
+    flex-wrap: wrap;
+    }
+    
+    .inputs {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    }
+    
+    .user-input {
+    padding: 12px 15px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    min-width: 220px;
+    }
+    
+    .buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    }
+    .inputs p{
+     display: block;   
+    }
+    .btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+      transition: 0.2s ease;
+    }
+    
+    .btn:hover {
+    opacity: 0.85;
+    }
+    @media (max-width: 768px) {
+    .account-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px;
+        gap: 10px;
+    }
+    
+    .left-header .page-title {
+        font-size: 30px;
+    }
+    
+    .user {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px;
+    }
+    
+    .inputs, .buttons {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    .user-input {
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+    }

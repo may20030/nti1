@@ -71,6 +71,36 @@ placeOrderBtn.addEventListener("click", (e) => {
     orders.push(orderData);
     localStorage.setItem("checkoutData", JSON.stringify(orders));
 
-    alert("Order placed and data saved successfully in localStorage!");
+    
 });
+});
+
+
+
+// ===========================================================mayar
+document.addEventListener("DOMContentLoaded", function () {
+    let cartContainer2 = document.getElementById("product-in-cout");
+    let subtotalElement = document.getElementById("subtotal-amount");
+    let subtotal = 0;
+    for (let key in localStorage) {
+        if (key.startsWith("product_")) {
+            let item = JSON.parse(localStorage.getItem(key));
+
+            let div = document.createElement("div");
+            div.className = "product1";
+
+            let strong = document.createElement("strong");
+            strong.textContent = item.title;
+
+            let span = document.createElement("span");
+            span.textContent = `$${item.price}`;
+
+            div.appendChild(strong);
+            div.appendChild(span);
+
+            cartContainer2.appendChild(div);
+            subtotal += parseFloat(item.price);
+        }
+    }
+    subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
 });
