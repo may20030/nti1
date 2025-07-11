@@ -32,35 +32,6 @@ function changeSlide(index) {
     const carousel = new bootstrap.Carousel(document.querySelector('#carouselProduct'));
     carousel.to(index);
 }
-
-function updateQty(delta) {
-    const input = document.getElementById('qtyInput');
-    let value = parseInt(input.value);
-    value = isNaN(value) ? 1 : value + delta;
-    input.value = Math.max(value, 1);
-}
-function changeSlide(index) {
-    const carousel = new bootstrap.Carousel(document.querySelector('#carouselProduct'));
-    carousel.to(index);
-}
-
-function updateQty(delta) {
-    const input = document.getElementById('qtyInput');
-    let value = parseInt(input.value);
-    value = isNaN(value) ? 1 : value + delta;
-    input.value = Math.max(value, 1);
-}
-function changeSlide(index) {
-    const carousel = new bootstrap.Carousel(document.querySelector('#carouselProduct'));
-    carousel.to(index);
-}
-
-function updateQty(delta) {
-    const input = document.getElementById('qtyInput');
-    let value = parseInt(input.value);
-    value = isNaN(value) ? 1 : value + delta;
-    input.value = Math.max(value, 1);
-}
 // ==============================================================
 
 function displayproducts(json, id) {
@@ -116,7 +87,7 @@ fetch("../json/pro3.json")
         card.innerHTML = `
           <div class="card mycard text-center position-relative overflow-hidden">
             ${product.isNew ? '<div class="badge-new">New</div>' : ''}
-            <a href="./mayar/product.html?id=${product.id}">
+            <a href="../mayar/product.html?id=${product.id}">
               <img src="${product.image}" class="img-fluid mb-3 product-img" style="height:250px;object-fit:contain;" alt="">
             </a>
             <button class="add-to-cart">
