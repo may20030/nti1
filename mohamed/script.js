@@ -70,6 +70,7 @@ placeOrderBtn.addEventListener("click", (e) => {
 
     orders.push(orderData);
     localStorage.setItem("checkoutData", JSON.stringify(orders));
+     alert("Order placed and data saved successfully!");
 
     
 });
